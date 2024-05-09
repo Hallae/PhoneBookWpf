@@ -1,0 +1,19 @@
+﻿<Window x:Class="PhoneCompanyApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Phone Company App" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="SubscribtionsDataGrid" AutoGenerateColumns="False" Margin="10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="FIO" Binding="{Binding Fio}" />
+                <DataGridTextColumn Header="Street" Binding="{Binding Address.StreetName}" />
+                <DataGridTextColumn Header="House Number" Binding="{Binding Address.HouseNumber}" />
+                <DataGridTextColumn Header="Home Phone" Binding="{Binding PhoneNumbers.FirstOrDefault(p => p.Type == 'Home').Number}" />
+                <DataGridTextColumn Header="Work Phone" Binding="{Binding PhoneNumbers.FirstOrDefault(p => p.Type == 'Work').Number}" />
+                <DataGridTextColumn Header="Mobile Phone" Binding="{Binding PhoneNumbers.FirstOrDefault(p => p.Type == 'Mobile').Number}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Search" Click="SearchButton_Click" Margin="10"/>
+        <Button Content="Export CSV" Click="ExportCsvButton_Click" Margin="10"/>
+    </Grid>
+</Window>
