@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PhoneBookWpf.Models
 {
-   public class Subscribtion
+   public class Subscription
     {
         public int Id { get; set; }
         public string Fio { get; set; }

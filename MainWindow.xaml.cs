@@ -22,12 +22,12 @@ namespace PhoneBookWpf
     /// </summary>
     public partial class MainWindow : Window
     {
-        public ObservableCollection<SubscribtionViewModel> subscribtions { get; set; }
+        public ObservableCollection<SubscriptionViewModel> Subscriptions { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
-            Subscribtion = new ObservableCollection<subscritionViewModel>();
+            Subscription = new ObservableCollection<SubscriptionViewModel>();
             DataContext = this;
         }
 
